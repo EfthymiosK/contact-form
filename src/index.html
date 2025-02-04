@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./output.css">    
+<title>contact form</title>
+</head>
+<body class="bg-Green200 min-h-screen grid place-content-center font-Karla">
+    <main class="max-w-[343px] md:max-w-[690px] lg:max-w-[736px] bg-white p-6 md:p-10 rounded-xl">
+        <h1 class="text-3xl text-Grey900 sm:mb-6">Contact Us</h1>
+        
+        <form id="contact-form">
+            <div class="form-item sm:flex sm:gap-4 sm:mb-6">
+                <div class="first-name mb-6 sm:mb-0">
+                    <label class="text-Grey900" for="first-name">First Name <span class="required-input">*</span></label>
+                    <input class="w-full border-1 rounded-md border-Grey500 p-2 mt-2 focus:outline-1 focus:outline-Green600 focus:border-1 focus:border-Green600 cursor-pointer" type="text" name="first-name" id="first-name">
+                    <p class="form-alert text-Red mt-2 hidden">This field is required</p>
+                </div>
+                <div class="last-name">
+                    <label class="text-Grey900" for="last-name">Last Name <span class="required-input">*</span></label>
+                    <input class="w-full border-1 rounded-md border-Grey500 p-2 mt-2 focus:outline-1 focus:outline-Green600 focus:border-1 focus:border-Green600 cursor-pointer" type="text" name="last-name" id="last-name">
+                    <p class="form-alert text-Red mt-2 hidden">This field is required</p>
+                </div>
+            </div>
+            <div class="form-item mb-6">
+                <label class="text-Grey900" for="email">Email Adress <span class="required-input">*</span></label>
+                <input class="w-full border-1 rounded-md border-Grey500 p-2 mt-2 focus:outline-1 focus:outline-Green600 focus:border-1 focus:border-Green600 cursor-pointer" type="email" name="email" id="email">
+                <p class="form-alert text-Red mt-2 hidden">Please enter a valid email adress</p>
+            </div>
+            <div class="form-item mb-6">
+                <label class="text-Grey900" for="query-type">Query Type <span class="required-input">*</span></label>
+
+                <div id="radio-iputs" class="radio-iputs sm:flex mt-2 sm:gap-4 sm:w-full">
+                    <div class="radio-option border-1 rounded-md border-Grey500 p-2 mb-4 sm:mb-0 sm:w-[50%] cursor-pointer">
+                        <input class="focus:outline-1 focus:outline-Green600 focus:border-1 focus:border-Green600 cursor-pointer appearance-none w-2 h-2 outline-2 outline-Green600 outline-offset-3 rounded-[50%] checked:bg-Green600 ml-6 mr-3" type="radio" name="query-type" id="general-enquiry" value="General Enquiry">
+                        <label class="text-Grey900 cursor-pointer" for="general-enquiry">General Enquiry</label>
+                    </div>
+
+                    <div class="radio-option border-1 rounded-md border-Grey500 p-2 sm:w-[50%] cursor-pointer">
+                        <input class="focus:outline-1 focus:outline-Green600 focus:border-1 focus:border-Green600 cursor-pointer appearance-none w-2 h-2 outline-2 outline-Green600 outline-offset-3 rounded-[50%] checked:bg-Green600 ml-6 mr-3" type="radio" name="query-type" id="support-request" value="Support Request">
+                        <label class="text-Grey900 cursor-pointer" for="support-request">Support Request</label>
+                    </div>
+                    
+                </div>
+                <p id="radio-form-alert" class="form-alert text-Red mt-2 hidden">Please select a query type</p>
+            </div>
+
+            <div class="form-item mb-6">
+                <label class="text-Grey900" for="message">Message <span class="required-input">*</span></label>
+                <textarea class=" w-full h-[240px] sm:h-[132px] md:h-[105px] border-1 rounded-md border-Grey500 p-2 mt-2 focus:outline-1 focus:outline-Green600 focus:border-1 focus:border-Green600 cursor-pointer" name="message" id="message" rows="4"></textarea>
+                <p class="form-alert text-Red mt-2 hidden">This field is required</p>
+            </div>
+
+            <div class="form-item mb-6">
+                <div class="">
+                    <input class="focus:outline-1 focus:outline-Green600 focus:border-1 focus:border-Green600 cursor-pointer accent-Green600" type="checkbox" name="consent" id="consent">
+                    <label class="text-Grey900 cursor-pointer" for="consent">I consent to be contacted by the team <span class="required-input">*</span></label>
+                </div>
+
+                <p class="form-alert text-Red mt-2 hidden">To submit this form, please consent to being contacted</p>
+            </div>
+            <button type="submit" id="submit-btn" class="submit-btn cursor-pointer w-full bg-Green600 text-white py-2 rounded-lg hover:bg-Grey900">Submit</button>
+        </form>
+    </main>
+
+    <div id="success-message" class="success-message bg-Grey900 text-Green200 w-60 sm:w-max p-4 pointer-events-none fixed top-[5%] left-[50%] rounded-lg hidden" style="transform: translateX(-50%);">
+        <div class="message-header flex gap-4 items-center font-bold">
+            <img src="./images/icon-success-check.svg" alt="">
+            Message Sent!
+        </div>
+
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

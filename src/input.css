@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+--font-Karla: "Karla", serif;
+
+--color-Green200: hsl(148, 38%, 91%);
+--color-Green600: hsl(169, 82%, 27%);
+--color-Red: hsl(0, 66%, 54%);
+--color-Grey500: hsl(186, 15%, 59%);
+--color-Grey900: hsl(187, 24%, 22%);
+}
